@@ -12,17 +12,17 @@ GRANT ALL PRIVILEGES ON DATABASE "adoptme_stats" TO postgres;
 
 -- Now create a table for your server to store the data. Be extra careful in this step!
 CREATE TABLE pet_statistic (
-    pet_name VARCHAR(100),
-    pet_origin VARCHAR(100),
-    rarity VARCHAR(50),
+    name VARCHAR(225) PRIMARY KEY,
+    type VARCHAR(225),
+    rarity VARCHAR(225),
     chance FLOAT,
-    age VARCHAR(50),
+    age VARCHAR(225),
     currency VARCHAR(100),
     amount INTEGER,
-    pet_ride VARCHAR(50),
-    pet_fly VARCHAR(50),
-    pet_neon VARCHAR(50),
-    pet_mega VARCHAR(50)
+    ride BOOLEAN,
+    fly BOOLEAN,
+    neon BOOLEAN,
+    mega BOOLEAN
 );
 
 -- Confirm the table was created with empty data
